@@ -21,16 +21,18 @@ public class App {
         try (Connection con = DriverManager.getConnection(URL,USER, PASSWORD);
              PreparedStatement stmt = con.prepareStatement(sqlCmd))
         {
-            stmt.setString(1, "Tugberk");
-            stmt.setString(2, "mehmettugberkcelik@gmail.com");
+            stmt.setString(1, "sumeyye");
+            stmt.setString(2, "sumeyye@gmail.com");
             stmt.setBoolean(3, true);
             stmt.setTimestamp(4, Timestamp.valueOf(LocalDateTime.now()));
 
-            stmt.executeUpdate();
+            stmt.execute();
         }
         catch (Throwable ex) {
             ex.printStackTrace();
         }
+
+
 
 
     }
