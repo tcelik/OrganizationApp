@@ -1,5 +1,8 @@
 package org.csystem.organizationapp;
 
+import org.csystem.organizationapp.dao.ParticipiantDao;
+import org.csystem.organizationapp.entity.ParticipiantInfo;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,28 +14,13 @@ public class App {
     //enum
     public static void main(String[] args)
     {
-        A a = A.INSTANCE;
-        A b = A.INSTANCE;
-
-        if (a == b) {
-            System.out.println("aynı adres");
+        try {
+            ParticipiantDao.INSTANCE.insert(new ParticipiantInfo("a", "a",true, LocalDateTime.now()));
         }
-        
-        Util u2 = Util.util;
+        catch (Throwable ex) {
+            ex.printStackTrace();
+        }
 
     }
 }
 
-enum A {
-    //default constructor çağrılır INSTANCE İLE INSTANCE() aynı
-    INSTANCE;
-
-
-
-}
-
-class Util {
-    public static final Util util = new Util();
-
-    private Util() {}
-}
