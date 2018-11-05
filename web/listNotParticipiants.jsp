@@ -2,7 +2,8 @@
 
 <%@ page import="org.csystem.organizationapp.dal.ParticipiantAppDAL" %>
 <%@ page import="java.util.List" %>
-<%@ page import="org.csystem.organizationapp.entity.ParticipiantInfo" %><%--
+<%@ page import="org.csystem.organizationapp.entity.ParticipiantInfo" %>
+<%@ page import="org.csystem.organizationapp.util.WebUtil" %><%--
   Created by IntelliJ IDEA.
   User: tugberk
   Date: 6.11.2018
@@ -27,32 +28,7 @@
 </div>
 
 <%
-    //Table tag
-    String result = "<table>";
-
-    //Header
-    result += "<tr>";
-
-    result += "<th>Name</th>";
-    result += "<th>Email</th>";
-    result += "<th>WillAttend</th>";
-    result += "<th>RegisterTime</th>";
-    result += "</tr>";
-
-    //row
-    for (ParticipiantInfo pi : ParticipiantAppDAL.INSTANCE.getWillNotAttended()){
-        String fmt = "<td>%s</td><td>%s</td><td>%b</td><td>%s</td>";
-        result += "<tr>";
-
-        result += String.format(fmt, pi.getName(), pi.getEmail(), pi.willAttend(), pi.getRegisterTime());
-
-        result += "</tr>";
-    }
-
-    result += "</table>";
-
-
-    out.println(result);
+    out.println(WebUtil.makeTableStr(ParticipiantAppDAL.INSTANCE.getWillNotAttended()));
 %>
 </body>
 </html>
