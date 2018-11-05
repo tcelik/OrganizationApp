@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 public class ParticipateFormHandler {
     private HttpServletRequest m_request;
     private HttpServletResponse m_response;
+
+    //belki lazım olur.(Operation yazmıştım:))
     private ParticipiantInfo m_participiantInfo;
 
     private void validate(String name, String email)

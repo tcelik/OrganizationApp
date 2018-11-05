@@ -4,10 +4,10 @@ import org.csystem.dao.DaoException;
 import org.csystem.dao.IDao;
 import org.csystem.organizationapp.entity.ParticipiantInfo;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.Timestamp;
+import java.io.IOException;
+import java.sql.*;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 //Crud Anlaşmalarına uymak için
@@ -19,6 +19,17 @@ public enum ParticipiantDao implements IDao<ParticipiantInfo> {
     public static final String URL = "jdbc:postgresql://localhost:5432/organizationdb";
     public static final String USER = "postgres";
     public static final String PASSWORD = "12345";
+
+    private ParticipiantInfo getParticipiant(ResultSet rs)  throws SQLException
+    {
+        int id = rs.getInt(1);
+        String name = rs.getString(2);
+        String email = rs.getString(3);
+        boolean willAttend = rs.getBoolean(4);
+        Timestamp joinTime = rs.getTimestamp(5);
+
+        return  new ParticipiantInfo(id, name, email ,willAttend, joinTime.toLocalDateTime());
+    }
 
     //insert ver bana bir katılımcı onu veritabanına eklim
     public boolean insert(ParticipiantInfo pi)
@@ -41,10 +52,27 @@ public enum ParticipiantDao implements IDao<ParticipiantInfo> {
 
     }
 
-    @Override
+    //select * from tablename, bütün tablodan bir liste veriyor. Listenin her bir elemanı katılımcılarımız userlarım.
     public List<ParticipiantInfo> getAll()
     {
-        throw new UnsupportedOperationException();
+        List<ParticipiantInfo> result = new ArrayList<>();
+        //cümlemi oluşturuyorum
+        var sqlCmd = "select * from participiants";
+
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+            PreparedStatement stmt = con.prepareStatement(sqlCmd)) {
+
+            ResultSet rs = stmt.executeQuery();
+
+
+            while (rs.next()) {
+                result.add(getParticipiant(rs));
+            }
+            return result;
+        }
+        catch (Throwable ex) {
+            throw new DaoException("getAll", ex);
+        }
     }
 
     @Override
