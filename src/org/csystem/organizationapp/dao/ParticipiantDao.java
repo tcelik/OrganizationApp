@@ -5,6 +5,7 @@ import org.csystem.dao.IDao;
 import org.csystem.organizationapp.entity.ParticipiantInfo;
 
 import java.io.IOException;
+import java.net.DatagramPacket;
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -73,6 +74,32 @@ public enum ParticipiantDao implements IDao<ParticipiantInfo> {
         catch (Throwable ex) {
             throw new DaoException("getAll", ex);
         }
+    }
+
+    public List<ParticipiantInfo> getParticipiantsByAttendance(boolean willAttend)
+    {
+        List<ParticipiantInfo> result = new ArrayList<>();
+        var sqlCmd = "select * from participiants where will_attend=" + willAttend;
+
+        try (Connection con = DriverManager.getConnection(URL, USER,PASSWORD);
+            PreparedStatement stmt = con.prepareStatement(sqlCmd)) {
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                result.add(getParticipiant(rs));
+            }
+
+            return result;
+        }
+        catch (Throwable ex) {
+            throw new DaoException("getParticipiantsByAttendane", ex);
+        }
+
+
+
+
+
     }
 
     @Override

@@ -26,7 +26,6 @@
         out.println(pi.willAttend()? pi : "");
     }
 
-
 %>
 </body>
 </html>
