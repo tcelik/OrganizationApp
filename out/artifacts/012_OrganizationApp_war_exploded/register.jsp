@@ -1,6 +1,7 @@
 <%@ page import="org.csystem.organizationapp.dal.ParticipiantAppDAL" %>
 <%@ page import="org.csystem.organizationapp.entity.ParticipiantInfo" %>
-<%@ page import="java.time.LocalDateTime" %><%--
+<%@ page import="java.time.LocalDateTime" %>
+<%@ page import="org.csystem.organizationapp.form.ParticipateFormHandler" %><%--
   Created by IntelliJ IDEA.
   User: tugberk
   Date: 5.11.2018
@@ -48,13 +49,10 @@
     if (!request.getMethod().equals("POST"))
         return;
 
-    //post ile gelmişsem eğer.
-    String nameStr  = request.getParameter("name");
-    String emailStr = request.getParameter("email");
-    String willAttendStr = request.getParameter("willAttend");
+    //post ile gelmişsem eğer, form'dan dataları çek ve veritabanına kaydetme işlemini sınıf yapıcak.
+    ParticipateFormHandler handler = new ParticipateFormHandler(request, response);
 
-    //veritabanına ekleyelim
-    ParticipiantAppDAL.INSTANCE.insertParticipiant(new ParticipiantInfo(nameStr, emailStr, willAttendStr == null? false : true, LocalDateTime.now()));
+    handler.doPost();
 %>
 
 </body>
