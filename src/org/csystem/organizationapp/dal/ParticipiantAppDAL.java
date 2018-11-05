@@ -40,6 +40,27 @@ public enum  ParticipiantAppDAL {
         }
     }
 
+    public List<ParticipiantInfo> getWillAttended()
+    {
+        try {
+            return ParticipiantDao.INSTANCE.getParticipiantsByAttendance(true);
+        }
+        catch (Throwable ex) {
+            throw new DalException("getWillAttended", ex);
+        }
+    }
+
+    //dışarısı algoritmayı bilmesin dal katmanı bilsin false mu true mu diye.
+    public List<ParticipiantInfo> getWillNotAttended()
+    {
+        try {
+            return ParticipiantDao.INSTANCE.getParticipiantsByAttendance(false);
+        }
+        catch (Throwable ex) {
+            throw new DalException("getWillNotAttended", ex);
+        }
+    }
+
 
     public boolean update(ParticipiantInfo participiantInfo)
     {
