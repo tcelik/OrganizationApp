@@ -1,5 +1,6 @@
 package org.csystem.organizationapp.dao;
 
+import org.csystem.dao.DaoException;
 import org.csystem.organizationapp.entity.ParticipiantInfo;
 
 import java.sql.Connection;
@@ -33,7 +34,8 @@ public enum ParticipiantDao {
         }
         catch (Throwable ex) {
             //burada dao exception fırlatacağız. Veritabanı değişirse diye.
+            throw new DaoException("insert yaparken hata oluştur", ex);
         }
-        return true;
+
     }
 }

@@ -1,4 +1,4 @@
-package org.csystem.organizationapp;
+package org.csystem.organizationapp.app;
 
 import org.csystem.organizationapp.dao.ParticipiantDao;
 import org.csystem.organizationapp.entity.ParticipiantInfo;
