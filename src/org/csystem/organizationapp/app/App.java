@@ -15,12 +15,6 @@ public class App {
     //enum
     public static void main(String[] args)
     {
-        try {
-            ParticipiantAppDAL.INSTANCE.insertParticipiant(new ParticipiantInfo("c", "C",true, LocalDateTime.now()));
-        }
-        catch (Throwable ex) {
-            ex.printStackTrace();
-        }
 
     }
 }
