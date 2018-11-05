@@ -16,7 +16,18 @@
 </head>
 <body>
 <%
-    ParticipiantAppDAL.INSTANCE.getWillNotAttended();
+
+
+
+    List<ParticipiantInfo> listParticipiants = ParticipiantAppDAL.INSTANCE.getWillNotAttended();
+
+    for (ParticipiantInfo pi : listParticipiants) {
+        //dinamik html
+
+        String fmt = "<h1>%s - %s - %s </h1>";
+        String result = String.format(fmt, pi.getName(), pi.getEmail(), pi.getRegisterTime().toString());
+        out.println(result);
+    }
 %>
 </body>
 </html>

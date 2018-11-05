@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="91308c22-0af9-4514-aa5b-d477c326db49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/listParticipiants.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/listParticipiants.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/listNotParticipiants.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/listNotParticipiants.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,13 +56,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="4035" />
-          <entry key="jsp" value="1314" />
+          <entry key="jsp" value="1322" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="4035" />
-          <entry key="JSP" value="1314" />
+          <entry key="JSP" value="1322" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -83,20 +83,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/listParticipiants.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="158">
               <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/listNotParticipiants.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+            <state relative-caret-position="328">
+              <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -143,8 +143,8 @@
         <option value="$PROJECT_DIR$/web/allParticipiants.jsp" />
         <option value="$PROJECT_DIR$/src/org/csystem/organizationapp/dao/ParticipiantDao.java" />
         <option value="$PROJECT_DIR$/src/org/csystem/organizationapp/dal/ParticipiantAppDAL.java" />
-        <option value="$PROJECT_DIR$/web/listNotParticipiants.jsp" />
         <option value="$PROJECT_DIR$/web/listParticipiants.jsp" />
+        <option value="$PROJECT_DIR$/web/listNotParticipiants.jsp" />
       </list>
     </option>
   </component>
@@ -212,7 +212,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541456272065" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541456389756" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -352,12 +352,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541323815032</updated>
       <workItem from="1541323819495" duration="3651000" />
-      <workItem from="1541443852238" duration="10215000" />
+      <workItem from="1541443852238" duration="10347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13866000" />
+    <option name="totallyTimeSpent" value="13998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -528,17 +528,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/listNotParticipiants.jsp">
+    <entry file="file://$PROJECT_DIR$/web/listParticipiants.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        <state relative-caret-position="158">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/listParticipiants.jsp">
+    <entry file="file://$PROJECT_DIR$/web/listNotParticipiants.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="328">
+          <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
         </state>
       </provider>
     </entry>
