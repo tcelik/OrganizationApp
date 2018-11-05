@@ -74,4 +74,9 @@ public class ParticipiantInfo {
     {
         m_registerTime = registerTime;
     }
+
+    public String toString()
+    {
+        return String.format("%s - %s%n", m_name, m_email);
+    }
 }

@@ -16,5 +16,17 @@
     <p>
       <a href="register.jsp">Katılımcı ekle</a>
     </p>
+
+    <p>
+      <a href="listParticipiants.jsp">Katıldım seçeneği işaretleyenleri listelemek</a>
+    </p>
+
+    <p>
+      <a href="listNotParticipiants.jsp">Katılmayanları listelemek</a>
+    </p>
+
+    <p>
+      <a href="allParticipiants.jsp">Tümü listelemek</a>
+    </p>
   </body>
 </html>
