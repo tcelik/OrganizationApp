@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="org-csystem-dao" />
+      <artifact name="org-cystem-dal" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91308c22-0af9-4514-aa5b-d477c326db49" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgresql_42_2_5.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/012-OrganizationApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/012-OrganizationApp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/csystem/organizationapp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/csystem/organizationapp/app/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/csystem/organizationapp/dal/ParticipiantAppDAL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/csystem/organizationapp/dal/ParticipiantAppDAL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/csystem/organizationapp/dao/ParticipiantDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/csystem/organizationapp/dao/ParticipiantDao.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,22 +57,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="995" />
+          <entry key="java" value="1413" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="995" />
+          <entry key="JAVA" value="1413" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="4" />
+          <entry key="java" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -94,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/csystem/organizationapp/dao/ParticipiantDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="38" selection-start-column="38" selection-end-column="38" />
+            <state relative-caret-position="198">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,13 +103,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/csystem/organizationapp/dal/ParticipiantAppDAL.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state>
+              <caret column="19" selection-start-column="12" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DalLib/src/org/cystem/dal/DalException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+              <folding>
+                <element signature="e#150#151#0" expanded="true" />
+                <element signature="e#181#182#0" expanded="true" />
+                <element signature="e#140#141#0" expanded="true" />
+                <element signature="e#166#167#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,8 +175,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -176,11 +188,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/org/csystem/organizationapp/entity/Participiants.java" />
         <option value="$PROJECT_DIR$/src/org/csystem/organizationapp/App.java" />
-        <option value="$PROJECT_DIR$/src/org/csystem/organizationapp/dal/ParticipiantAppDAL.java" />
         <option value="$PROJECT_DIR$/DaoLib/src/org/csystem/dao/DaoException.java" />
         <option value="$PROJECT_DIR$/DaoLib/src/org/csystem/dao/IDao.java" />
         <option value="$PROJECT_DIR$/DaoLib/src/org/csystem/dao/IDaoTemplate.java" />
         <option value="$PROJECT_DIR$/src/org/csystem/organizationapp/dao/ParticipiantDao.java" />
+        <option value="$PROJECT_DIR$/DalLib/src/org/cystem/dal/DalException.java" />
+        <option value="$PROJECT_DIR$/src/org/csystem/organizationapp/dal/ParticipiantAppDAL.java" />
       </list>
     </option>
   </component>
@@ -225,6 +238,17 @@
               <item name="OrganizationApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="OrganizationApp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="OrganizationApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrganizationApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OrganizationApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrganizationApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="organizationapp" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -235,7 +259,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541445410465" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541446030917" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -319,18 +343,18 @@
       <option name="presentableId" value="Default" />
       <updated>1541323815032</updated>
       <workItem from="1541323819495" duration="3651000" />
-      <workItem from="1541443852238" duration="1557000" />
+      <workItem from="1541443852238" duration="2180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5208000" />
+    <option name="totallyTimeSpent" value="5831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -346,7 +370,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.329927" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.329927" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -387,17 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DaoLib/src/org/csystem/dao/DaoException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding>
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#188#189#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DaoLib/src/org/csystem/dao/IDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -412,20 +425,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/csystem/organizationapp/dao/ParticipiantDao.java">
+    <entry file="file://$PROJECT_DIR$/DaoLib/src/org/csystem/dao/DaoException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DalLib/src/org/cystem/dal/DalException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="38" selection-start-column="38" selection-end-column="38" />
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#140#141#0" expanded="true" />
+            <element signature="e#166#167#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/csystem/organizationapp/dal/ParticipiantAppDAL.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state>
+          <caret column="19" selection-start-column="12" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/csystem/organizationapp/dao/ParticipiantDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -438,7 +475,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>org-csystem-dao</last-edited>
+          <last-edited>org-cystem-dal</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -512,7 +549,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org-csystem-dao</last-edited>
+          <last-edited>org-cystem-dal</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

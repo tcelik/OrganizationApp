@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/012-OrganizationApp.iml" filepath="$PROJECT_DIR$/012-OrganizationApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DalLib/DalLib.iml" filepath="$PROJECT_DIR$/DalLib/DalLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/DaoLib/DaoLib.iml" filepath="$PROJECT_DIR$/DaoLib/DaoLib.iml" />
     </modules>
   </component>

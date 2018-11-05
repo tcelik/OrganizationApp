@@ -21,5 +21,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.12" level="application_server_libraries" />
     <orderEntry type="library" name="org-csystem-dao" level="project" />
+    <orderEntry type="library" name="org-cystem-dal" level="project" />
   </component>
 </module>

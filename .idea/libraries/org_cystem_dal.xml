@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="org-cystem-dal">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/org-cystem-dal.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
