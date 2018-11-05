@@ -15,16 +15,30 @@
     <title>Katılanlar</title>
 </head>
 <body>
+<div id="form-div">
+
+
+    <p class="name">
+        KATILANLARI LİSTELEMEK
+    </p>
+
+
+</div>
+
 <%
-
-
     //Burada nasıl bir yakalşım olucak. Ben olsam dao'da bu işi çözerim. Dal katmanı daodan bağımsız olarak 2 liste döndürür.
     //katılanlar listesi, katılmayanlar listesi.
-    List<ParticipiantInfo> list = ParticipiantAppDAL.INSTANCE.getAllUser();
 
-    for (ParticipiantInfo pi : list) {
-        out.println(pi.willAttend()? pi : "");
+
+
+    for (ParticipiantInfo pi : ParticipiantAppDAL.INSTANCE.getWillAttended()) {
+        //dinamik html
+
+        String fmt = "<h1>%s - %s - %s </h1>";
+        String result = String.format(fmt, pi.getName(), pi.getEmail(), pi.getRegisterTime().toString());
+        out.println(result);
     }
+
 
 %>
 </body>

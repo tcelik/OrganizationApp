@@ -16,16 +16,7 @@
 </head>
 <body>
 <%
-
-
-    //Burada nasıl bir yakalşım olucak. Ben olsam dao'da bu işi çözerim. Dal katmanı daodan bağımsız olarak 2 liste döndürür.
-    //katılanlar listesi, katılmayanlar listesi.
-    List<ParticipiantInfo> list = ParticipiantAppDAL.INSTANCE.getAllUser();
-
-    for (ParticipiantInfo pi : list) {
-        out.println(!pi.willAttend()? pi : "");
-    }
-
+    ParticipiantAppDAL.INSTANCE.getWillNotAttended();
 %>
 </body>
 </html>
