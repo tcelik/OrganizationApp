@@ -1,15 +1,17 @@
 package org.csystem.organizationapp.dao;
 
 import org.csystem.dao.DaoException;
+import org.csystem.dao.IDao;
 import org.csystem.organizationapp.entity.ParticipiantInfo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.Timestamp;
+import java.util.List;
 
 //Crud Anlaşmalarına uymak için
-public enum ParticipiantDao {
+public enum ParticipiantDao implements IDao<ParticipiantInfo> {
     //CRUD İŞLEMLERİ -> participiants diye bir tablo vardı ya hani onun işlerini halledecek.
     INSTANCE;
 
@@ -37,5 +39,23 @@ public enum ParticipiantDao {
             throw new DaoException("insert yaparken hata oluştur", ex);
         }
 
+    }
+
+    @Override
+    public List<ParticipiantInfo> getAll()
+    {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean update(ParticipiantInfo participiantInfo)
+    {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean delete(ParticipiantInfo participiantInfo)
+    {
+        throw new UnsupportedOperationException();
     }
 }

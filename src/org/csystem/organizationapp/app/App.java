@@ -1,5 +1,6 @@
 package org.csystem.organizationapp.app;
 
+import org.csystem.organizationapp.dal.ParticipiantAppDAL;
 import org.csystem.organizationapp.dao.ParticipiantDao;
 import org.csystem.organizationapp.entity.ParticipiantInfo;
 
@@ -15,7 +16,7 @@ public class App {
     public static void main(String[] args)
     {
         try {
-            ParticipiantDao.INSTANCE.insert(new ParticipiantInfo("a", "a",true, LocalDateTime.now()));
+            ParticipiantAppDAL.INSTANCE.insertParticipiant(new ParticipiantInfo("c", "C",true, LocalDateTime.now()));
         }
         catch (Throwable ex) {
             ex.printStackTrace();

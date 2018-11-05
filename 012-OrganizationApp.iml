@@ -22,5 +22,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.12" level="application_server_libraries" />
     <orderEntry type="library" name="org-csystem-dao" level="project" />
     <orderEntry type="library" name="org-cystem-dal" level="project" />
+    <orderEntry type="library" name="postgresql-42.2.5" level="project" />
   </component>
 </module>
