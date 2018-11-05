@@ -12,20 +12,47 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Katılanlar</title>
+    <title>Katılmayanlar</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
+<div id="form-div">
+    <p class="name">
+        KATILANMAYANLARI LİSTELEMEK
+    </p>
+</div>
+
 <%
+    //Table tag
+    String result = "<table>";
 
-    List<ParticipiantInfo> listParticipiants = ParticipiantAppDAL.INSTANCE.getWillNotAttended();
+    //Header
+    result += "<tr>";
 
-    for (ParticipiantInfo pi : listParticipiants) {
-        //dinamik html
+    result += "<th>Name</th>";
+    result += "<th>Email</th>";
+    result += "<th>WillAttend</th>";
+    result += "<th>RegisterTime</th>";
+    result += "</tr>";
 
-        String fmt = "<h1>%s - %s - %s </h1>";
-        String result = String.format(fmt, pi.getName(), pi.getEmail(), pi.getRegisterTime().toString());
-        out.println(result);
+    //row
+    for (ParticipiantInfo pi : ParticipiantAppDAL.INSTANCE.getWillNotAttended()){
+        String fmt = "<td>%s</td><td>%s</td><td>%b</td><td>%s</td>";
+        result += "<tr>";
+
+        result += String.format(fmt, pi.getName(), pi.getEmail(), pi.willAttend(), pi.getRegisterTime());
+
+        result += "</tr>";
     }
+
+    result += "</table>";
+
+
+    out.println(result);
 %>
 </body>
 </html>
