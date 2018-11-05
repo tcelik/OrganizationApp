@@ -12,5 +12,9 @@
   </head>
   <body>
     <h1>HOŞGELDİNİZ</h1>
+
+    <p>
+      <a href="register.jsp">Katılımcı ekle</a>
+    </p>
   </body>
 </html>

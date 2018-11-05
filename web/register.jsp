@@ -1,20 +1,16 @@
 <%--
   Created by IntelliJ IDEA.
   User: tugberk
-  Date: 4.11.2018
-  Time: 12:30
+  Date: 5.11.2018
+  Time: 22:47
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>İNDEX.JSP</title>
-  </head>
-  <body>
-    <h1>HOŞGELDİNİZ</h1>
+<head>
+    <title>Register-Form</title>
+</head>
+<body>
 
-    <p>
-      <a href="register.jsp">Katılımcı ekle</a>
-    </p>
-  </body>
+</body>
 </html>
