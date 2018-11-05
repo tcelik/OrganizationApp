@@ -13,33 +13,46 @@
 <html>
 <head>
     <title>Katılanlar</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
 <div id="form-div">
-
-
     <p class="name">
         KATILANLARI LİSTELEMEK
     </p>
-
-
 </div>
 
 <%
-    //Burada nasıl bir yakalşım olucak. Ben olsam dao'da bu işi çözerim. Dal katmanı daodan bağımsız olarak 2 liste döndürür.
-    //katılanlar listesi, katılmayanlar listesi.
+    //Table tag
+    String result = "<table>";
 
+    //Header
+    result += "<tr>";
 
+    result += "<th>Name</th>";
+    result += "<th>Email</th>";
+    result += "<th>WillAttend</th>";
+    result += "<th>RegisterTime</th>";
+    result += "</tr>";
 
+    //row
     for (ParticipiantInfo pi : ParticipiantAppDAL.INSTANCE.getWillAttended()) {
-        //dinamik html
+        String fmt = "<td>%s</td><td>%s</td><td>%b</td><td>%s</td>";
+        result += "<tr>";
 
-        String fmt = "<h1>%s - %s - %s </h1>";
-        String result = String.format(fmt, pi.getName(), pi.getEmail(), pi.getRegisterTime().toString());
-        out.println(result);
+        result += String.format(fmt, pi.getName(), pi.getEmail(), pi.willAttend(), pi.getRegisterTime());
+
+        result += "</tr>";
     }
 
+    result += "</table>";
 
+
+    out.println(result);
 %>
 </body>
 </html>

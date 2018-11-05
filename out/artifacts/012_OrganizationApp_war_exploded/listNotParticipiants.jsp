@@ -17,8 +17,6 @@
 <body>
 <%
 
-
-
     List<ParticipiantInfo> listParticipiants = ParticipiantAppDAL.INSTANCE.getWillNotAttended();
 
     for (ParticipiantInfo pi : listParticipiants) {
