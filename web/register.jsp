@@ -1,4 +1,6 @@
-<%--
+<%@ page import="org.csystem.organizationapp.dal.ParticipiantAppDAL" %>
+<%@ page import="org.csystem.organizationapp.entity.ParticipiantInfo" %>
+<%@ page import="java.time.LocalDateTime" %><%--
   Created by IntelliJ IDEA.
   User: tugberk
   Date: 5.11.2018
@@ -18,14 +20,19 @@
 
 <div id="form-main">
     <div id="form-div">
-        <form action="/login" method="post" class="form" id="form1">
+        <form method="post" class="form" id="form1">
 
             <p class="name">
-                <input name="name" type="text" class="feedback-input" placeholder="Kullanıcı adınız" id="name" />
+                <input name="name" type="text" class="feedback-input" placeholder="İsminiz" id="name" />
             </p>
 
             <p class="email">
                 <input name="email" type="text" class="feedback-input" id="email" placeholder="Email" />
+            </p>
+
+            <p class="email">
+                <input name="willAttend" type="checkbox" class="feedback-input" placeholder="Katılıyor musun?" value="true"/>
+                ETKİNLİĞİMİZE KATILIYOR MUSUN?
             </p>
 
             <div class="submit">
@@ -35,6 +42,20 @@
         </form>
     </div>
 </div>
+
+<%
+    //post ile gelmessem yani get ise diyelim çıkıyorum aşağıyı render etmiyorum.
+    if (!request.getMethod().equals("POST"))
+        return;
+
+    //post ile gelmişsem eğer.
+    String nameStr  = request.getParameter("name");
+    String emailStr = request.getParameter("email");
+    String willAttendStr = request.getParameter("willAttend");
+
+    //veritabanına ekleyelim
+    ParticipiantAppDAL.INSTANCE.insertParticipiant(new ParticipiantInfo(nameStr, emailStr, willAttendStr == null? false : true, LocalDateTime.now()));
+%>
 
 </body>
 </html>
