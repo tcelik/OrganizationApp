@@ -1,36 +1,42 @@
 package org.csystem.organizationapp.util;
 
+import org.csystem.organizationapp.TableTag;
 import org.csystem.organizationapp.entity.ParticipiantInfo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WebUtil {
     //ver bana list ondan sana bir table html üreteyim
+    private WebUtil() {}
+
+    private static void addCommon(ParticipiantInfo pi, List<String> list)
+    {
+        list.add(pi.getName());
+        list.add(pi.getEmail());
+        list.add(pi.getRegisterTime().toString());
+    }
 
     public static String makeTableStr(List<ParticipiantInfo> list)
     {
-        //Table tag
-        String result = "<table>";
+        TableTag tt = new TableTag();
 
-        //Header
-        result += "<tr>";
+        tt.addHead("Name");
+        tt.addHead("Email");
+        tt.addHead("Kayıt Tarihi");
+        tt.addHead("Katılım Durumu");
 
-        result += "<th>Name</th>";
-        result += "<th>Email</th>";
-        result += "<th>WillAttend</th>";
-        result += "<th>RegisterTime</th>";
-        result += "</tr>";
-
-        //row
+        //bunu her bir katılımcı için yapıyorum aslında datalrında bir liste oluşturuyorum.
         for (ParticipiantInfo pi : list) {
-            String fmt = "<td>%s</td><td>%s</td><td>%b</td><td>%s</td>";
-            result += "<tr>";
+            List<String> l = new ArrayList<>();
 
-            result += String.format(fmt, pi.getName(), pi.getEmail(), pi.willAttend(), pi.getRegisterTime());
+            addCommon(pi, l);
 
-            result += "</tr>";
+            l.add(pi.willAttend()?"katılıyor":"katılmıyor");
+
+            tt.addData(l);
         }
 
-        return  result += "</table>";
+        return tt.toString();
     }
 }

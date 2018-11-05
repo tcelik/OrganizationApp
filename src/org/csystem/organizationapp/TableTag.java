@@ -19,7 +19,22 @@ public class TableTag {
 
     public String toString()
     {
-        return "";
+        String tagStr = "<table>";
+
+        tagStr += "<tr>";
+        for (var head : m_heads) {
+            tagStr += String.format("<th>%s</th>", head);
+        }
+        tagStr += "</tr>";
+
+        for (var data : m_data) {
+            tagStr += "<tr>";
+            for (var dataList : data)
+                tagStr += String.format("<td>%s</td>", dataList);
+            tagStr += "</tr>";
+        }
+
+        return tagStr + "</table>";
     }
 
 
